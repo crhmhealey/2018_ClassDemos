@@ -3,8 +3,7 @@ def binaryToDecimal(number):
 	total = 0
 	while number>0:
 		current = number%10
-		if current == 1:
-			total += 2**counter
+		total += 2**counter * current
 		counter += 1
 		number = number//10
 	return total

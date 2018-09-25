@@ -12,3 +12,12 @@ def fib(n):
 	return a
 
 print(fib(int(sys.argv[1])))
+
+def bad_fib(n):
+	if n is 1 or n is 2:
+		return 1
+	else:
+		return bad_fib(n-1)+bad_fib(n-2)
+
+print(bad_fib(int(sys.argv[1])))
+
