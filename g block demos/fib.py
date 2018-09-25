@@ -7,7 +7,8 @@ import sys
 def fib(n):
 	a,b = 1,1
 	for i in range(n-1):
-		a,b = b,a+b
+		a,b = b,a+b 
+		# line above explanation: https://stackoverflow.com/questions/8725673/multiple-assignment-and-evaluation-order-in-python
 	return a
 
 print(fib(int(sys.argv[1])))
