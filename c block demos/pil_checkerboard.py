@@ -2,29 +2,23 @@ import random
 from PIL import Image
 
 def checkerboard():
-	r = 255;
-	for i in range(500):
-		if i%50 == 0:
-			if r == 255:
-				r = 0
-			else:
-				r = 255
-		for j in range(500):
-			if j%50 == 0:
-				if r == 255:
-					r = 0
-				else:
-					r = 255
+	total = 255
+	r = 0
+	for i in range(imgy):
+		if i%check_size == 0:
+			r = total-r
+		for j in range(imgx):
+			if j%check_size == 0:
+				r = total-r
 			image.putpixel((i,j),(r,0,0))
 
-			
-		
-
-imgx = 500
-imgy = 500
+num_checks = 8
+check_size = 50
+imgx = num_checks*check_size
+imgy = imgx
 
 image = Image.new("RGB",(imgx, imgy))
 
 checkerboard()
 
-image.save("snakes_image.png", "PNG")
+image.save("checkerboard.png", "PNG")
