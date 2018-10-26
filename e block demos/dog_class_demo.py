@@ -2,6 +2,7 @@ class Dog:
 
 	# constructor
 	# scale out of 10
+	name = "Dog"
 	def __init__(self, name, energy, fullness):
 		self.fullness = fullness
 		self.energy = energy
@@ -21,7 +22,7 @@ class Dog:
 		return status
 
 
-	def stats(self):
+	def __str__(self):
 		info = "Name: "+ self.name
 		info += "\nEnergy: " + str(self.energy)
 		info += "\nHappiness: " + str(self.happiness)
@@ -33,10 +34,10 @@ class Dog:
 
 dog1 = Dog("Tetris", 8, 2)
 dog2 = Dog("Bat", 5, 7)
-# print(dog1.name)
+print(type(dog1))
 
 while True:
-	print(dog1.stats())
+	print(dog1)
 	choice = input("What would you like to do with your dog?")
 	if choice == "play":
 		print(dog1.play())
