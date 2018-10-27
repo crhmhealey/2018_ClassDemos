@@ -32,7 +32,7 @@ class Account:
 			return pinerror()
 
 	def pinerror(self):
-		return "wrong pin"
+		return "wrong pin. This is a short error, but it could be more complex, making sense to have it in a method."
 
 
 ba = Account(500, 1111)
